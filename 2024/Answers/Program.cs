@@ -7,10 +7,11 @@ namespace Answers
 {
     public class Program
     {
-        private static Solution[] Solutions = new Solution[]
-        {
-            new Day1()
-        };
+        private static Solution[] Solutions =
+        [
+            new Day1(),
+            new Day2(),
+        ];
 
         public static void Main(string[] arg)
         {
