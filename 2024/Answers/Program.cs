@@ -11,6 +11,7 @@ namespace Answers
         [
             new Day1(),
             new Day2(),
+            new Day3()
         ];
 
         public static void Main(string[] arg)
