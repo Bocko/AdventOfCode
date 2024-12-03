@@ -8,20 +8,27 @@ namespace Answers
 {
     public abstract class Solution
     {
-        private string Divider = "##############################";
+        protected abstract int DayNum
+        {
+            get;
+        }
+
+        protected int Solution1 = 0;
+        protected int Solution2 = 0;
+
+        private const string Divider = "##############################";
 
         protected abstract void Read();
         protected abstract void SolvePartOne();
         protected abstract void SolvePartTwo();
-        protected abstract void Display();
 
-        protected void PrintSolution(int dayNum, string solution1, string solution2)
+        private void Display()
         {
-            Console.WriteLine($"Day {dayNum}.1: ");
-            Console.WriteLine($"    Solution: {solution1}");
+            Console.WriteLine($"Day {DayNum}.1: ");
+            Console.WriteLine($"    Solution: {Solution1}");
             Console.WriteLine(Divider);
-            Console.WriteLine($"Day {dayNum}.2: ");
-            Console.WriteLine($"    Solution: {solution2}");
+            Console.WriteLine($"Day {DayNum}.2: ");
+            Console.WriteLine($"    Solution: {Solution2}");
             Console.WriteLine(Divider);
         }
 

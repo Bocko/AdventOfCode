@@ -8,14 +8,13 @@ namespace Answers.Solutions
 {
     public class Day1 : Solution
     {
-        List<int> LeftColumn = new List<int>();
-        List<int> RightColumn = new List<int>();
+        protected override int DayNum => 1;
 
-        Dictionary<int, int> LeftColumnNumberCount = new Dictionary<int, int>();
-        Dictionary<int, int> RightColumnNumberCount = new Dictionary<int, int>();
+        readonly List<int> LeftColumn = new List<int>();
+        readonly List<int> RightColumn = new List<int>();
 
-        int Solution1 = 0;
-        int Solution2 = 0;
+        readonly Dictionary<int, int> LeftColumnNumberCount = new Dictionary<int, int>();
+        readonly Dictionary<int, int> RightColumnNumberCount = new Dictionary<int, int>();
 
         protected override void Read()
         {
@@ -63,11 +62,6 @@ namespace Answers.Solutions
             {
                 dictionary[key]++;
             }
-        }
-
-        protected override void Display()
-        {
-            PrintSolution(1, Solution1.ToString(), Solution2.ToString());
         }
     }
 }

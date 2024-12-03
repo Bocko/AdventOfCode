@@ -7,7 +7,7 @@ namespace Answers
 {
     public class Program
     {
-        private static Solution[] Solutions =
+        private static readonly Solution[] Solutions =
         [
             new Day1(),
             new Day2(),

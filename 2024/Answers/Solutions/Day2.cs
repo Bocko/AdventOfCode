@@ -8,11 +8,11 @@ namespace Answers.Solutions
 {
     internal class Day2 : Solution
     {
-        int Solution1 = 0; // Safe Reports
-        int Solution2 = 0;
+        protected override int DayNum => 2;
 
         readonly List<int[]> Reports = new List<int[]>();
         readonly List<int[]> FailedReports = new List<int[]>();
+
         protected override void Read()
         {
             string[] rows = File.ReadAllLines("../../../Data/day2.txt");
@@ -101,11 +101,6 @@ namespace Answers.Solutions
         private bool IsIncreasing(int diff)
         {
             return diff > 0;
-        }
-
-        protected override void Display()
-        {
-            PrintSolution(2, Solution1.ToString(), Solution2.ToString());
         }
     }
 }

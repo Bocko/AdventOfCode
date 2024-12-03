@@ -9,12 +9,11 @@ namespace Answers.Solutions
 {
     internal class Day3 : Solution
     {
-        int Solution1 = 0;
-        int Solution2 = 0;
+        protected override int DayNum => 3;
 
         string Instructions = "";
-        string MulPattern = @"mul\((?'first'\d{1,3}),(?'second'\d{1,3})\)";
-        string OnOffPattern = @"mul\((?'first'\d{1,3}),(?'second'\d{1,3})\)|do\(\)|don't\(\)";
+        const string MulPattern = @"mul\((?'first'\d{1,3}),(?'second'\d{1,3})\)";
+        const string OnOffPattern = @"mul\((?'first'\d{1,3}),(?'second'\d{1,3})\)|do\(\)|don't\(\)";
 
         protected override void Read()
         {
@@ -37,8 +36,6 @@ namespace Answers.Solutions
 
             foreach (Match m in Regex.Matches(Instructions, OnOffPattern))
             {
-                Console.WriteLine(m.Value);
-
                 if (m.Value.Equals("do()"))
                 {
                     enabled = true;
@@ -59,11 +56,6 @@ namespace Answers.Solutions
                     Solution2 += first * second;
                 }
             }
-        }
-
-        protected override void Display()
-        {
-            PrintSolution(3, Solution1.ToString(), Solution2.ToString());
         }
     }
 }
