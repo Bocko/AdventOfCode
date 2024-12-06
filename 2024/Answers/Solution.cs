@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,25 +19,33 @@ namespace Answers
 
         private const string Divider = "##############################";
 
+        private long TimeElapsed = 0;
+
         protected abstract void Read();
         protected abstract void SolvePartOne();
         protected abstract void SolvePartTwo();
 
         private void Display()
         {
-            Console.WriteLine($"Day {DayNum}.1: ");
-            Console.WriteLine($"    Solution: {Solution1}");
             Console.WriteLine(Divider);
-            Console.WriteLine($"Day {DayNum}.2: ");
-            Console.WriteLine($"    Solution: {Solution2}");
+            Console.WriteLine($"Day {DayNum}:");
+            Console.WriteLine($"\tTime: {TimeElapsed}ms");
             Console.WriteLine(Divider);
+            Console.WriteLine($"\tPart 1:");
+            Console.WriteLine($"\tSolution: {Solution1}");
+            Console.WriteLine(Divider);
+            Console.WriteLine($"\tPart 2:");
+            Console.WriteLine($"\tSolution: {Solution2}");
         }
 
         public void Run()
         {
+            Stopwatch sw = Stopwatch.StartNew();
             Read();
             SolvePartOne();
             SolvePartTwo();
+            sw.Stop();
+            TimeElapsed = sw.ElapsedMilliseconds;
             Display();
         }
     }

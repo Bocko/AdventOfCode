@@ -1,6 +1,7 @@
 ﻿
 
 using Answers.Solutions;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 namespace Answers
@@ -14,6 +15,7 @@ namespace Answers
             new Day3(),
             new Day4(),
             new Day5(),
+            new Day6(),
         ];
 
         public static void Main(string[] arg)
