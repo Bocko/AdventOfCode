@@ -14,8 +14,8 @@ namespace Answers
             get;
         }
 
-        protected int Solution1 = 0;
-        protected int Solution2 = 0;
+        protected long Solution1 = 0;
+        protected long Solution2 = 0;
 
         private const string Divider = "##############################";
 
