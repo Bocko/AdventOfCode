@@ -9,7 +9,7 @@ namespace Answers.Solutions
 {
     internal class Day3 : Solution
     {
-        protected override int DayNum => 3;
+        public override int DayNum => 3;
 
         string Instructions = "";
         const string MulPattern = @"mul\((?'first'\d{1,3}),(?'second'\d{1,3})\)";

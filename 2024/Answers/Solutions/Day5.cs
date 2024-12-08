@@ -8,7 +8,7 @@ namespace Answers.Solutions
 {
     internal class Day5 : Solution
     {
-        protected override int DayNum => 5;
+        public override int DayNum => 5;
 
         readonly Dictionary<int, List<int>> PageRules = new Dictionary<int, List<int>>();
         readonly List<int[]> Pages = new List<int[]>();
@@ -55,7 +55,7 @@ namespace Answers.Solutions
                     for (int j = i + 1; j < page.Length; j++)
                     {
                         int checkedPage = page[j];
-                        if (PageRules.TryGetValue(checkedPage, out List<int> rules))
+                        if (PageRules.TryGetValue(checkedPage, out var rules))
                         {
                             if (rules.Contains(currentPage))
                             {
@@ -106,7 +106,7 @@ namespace Answers.Solutions
                 for (int j = i + 1; j < page.Length; j++)
                 {
                     int checkedPage = page[j];
-                    if (PageRules.TryGetValue(checkedPage, out List<int> rules))
+                    if (PageRules.TryGetValue(checkedPage, out var rules))
                     {
                         if (rules.Contains(currentPage))
                         {

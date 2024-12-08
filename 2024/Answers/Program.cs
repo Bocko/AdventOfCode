@@ -17,6 +17,7 @@ namespace Answers
             new Day5(),
             new Day6(),
             new Day7(),
+            new Day8(),
         ];
 
         public static void Main(string[] arg)
@@ -26,10 +27,9 @@ namespace Answers
 
         private static void RunSolutions()
         {
-            foreach (Solution solution in Solutions)
-            {
-                solution.Run();
-            }
+            DateTime now = DateTime.Now;
+
+            Solutions.Where(s => s.DayNum == now.Day).First().Run();
         }
     }
 }

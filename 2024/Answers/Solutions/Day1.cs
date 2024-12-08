@@ -8,7 +8,7 @@ namespace Answers.Solutions
 {
     public class Day1 : Solution
     {
-        protected override int DayNum => 1;
+        public override int DayNum => 1;
 
         readonly List<int> LeftColumn = new List<int>();
         readonly List<int> RightColumn = new List<int>();

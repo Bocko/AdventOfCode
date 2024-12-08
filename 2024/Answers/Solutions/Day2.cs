@@ -8,7 +8,7 @@ namespace Answers.Solutions
 {
     internal class Day2 : Solution
     {
-        protected override int DayNum => 2;
+        public override int DayNum => 2;
 
         readonly List<int[]> Reports = new List<int[]>();
         readonly List<int[]> FailedReports = new List<int[]>();

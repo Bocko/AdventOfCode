@@ -8,7 +8,7 @@ namespace Answers.Solutions
 {
     internal class Day7 : Solution
     {
-        protected override int DayNum => 7;
+        public override int DayNum => 7;
 
         private enum Operators
         {

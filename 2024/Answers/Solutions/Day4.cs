@@ -9,7 +9,7 @@ namespace Answers.Solutions
 {
     internal class Day4 : Solution
     {
-        protected override int DayNum => 4;
+        public override int DayNum => 4;
 
         char[,]? XmasMatrix = null;
 

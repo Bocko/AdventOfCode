@@ -9,7 +9,7 @@ namespace Answers
 {
     public abstract class Solution
     {
-        protected abstract int DayNum
+        public abstract int DayNum
         {
             get;
         }
