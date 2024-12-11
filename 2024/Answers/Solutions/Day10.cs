@@ -77,14 +77,12 @@ namespace Answers.Solutions
             foreach (Point p in Trailheads)
             {
                 HashSet<Point> walkedPath = new HashSet<Point>();
-                WalkPathPartTwo(p, walkedPath);
+                WalkPathPartTwo(p);
             }
         }
 
-        private bool WalkPathPartTwo(Point currentPoint, HashSet<Point> walkedPath)
+        private bool WalkPathPartTwo(Point currentPoint)
         {
-            walkedPath.Add(currentPoint);
-
             if (HeightMap![currentPoint.y, currentPoint.x] == 9)
             {
                 Solution2++;
@@ -96,7 +94,7 @@ namespace Answers.Solutions
                 Point nextPoint = (currentPoint.x + Directions[i].x, currentPoint.y + Directions[i].y);
                 if (BoundsCheck(nextPoint) && IsValidStep(currentPoint, nextPoint))
                 {
-                    WalkPathPartTwo(nextPoint, walkedPath);
+                    WalkPathPartTwo(nextPoint);
                 }
             }
 
