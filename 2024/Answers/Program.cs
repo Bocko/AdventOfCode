@@ -22,6 +22,7 @@ namespace Answers
             new Day10(),
             new Day11(),
             new Day12(),
+            new Day13(),
         ];
 
         public static void Main(string[] arg)
